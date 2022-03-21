@@ -1,0 +1,34 @@
+#+bibliography: "../Taxonomi.bib"
+
+* The Taxonomy Dictionary
+The purpose of this dictionary is to include *all* taxonomic names, so that it can be used from your preferred text editor and correct your spelling mistakes. It should be of good use to anyone working with biology and frequently using taxonomic names in their writing. It will not check if italics have been used properly, so please be aware of that yourself. It has been built from four sources, and the goal is to include every taxon described:
+- [[https://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c][GBIF backbone]] [cite:@registry-migration.gbif.orgGBIFBackboneTaxonomy2021a]
+- [[https://talk.ictvonline.org/][ICTV]] [cite:@lefkowitzVirusTaxonomyDatabase2018]
+- [[https://lpsn.dsmz.de/text/introduction][LPSN]] [cite:@parteListProkaryoticNames2020]
+- [[https://www.mycobank.org/][Mycobank]] [cite:@robertMycoBankGearingNew2013]
+
+The taxonomic entries in the databases have been aggregated and deduplicated, so every single species and subspecies that figures in one of the databases is included. Every word appears only once to save space. The result is a dictionary consisting of 1,365,665 taxonomic entries.
+
+When you use this dictionary and spell a taxonomic name correct you don't see no red jigged line below the word. If you spell it wrong, you will see it right away. I have done some testing in Microsoft Word and with hunspell and found no noticeable lag. It is massive, for a comparison the english diction have around 130,000 words. As a consequence the autosuggestions for correcting a word is not always on spot. This depends on the spelling engine you use and not the dictionary.
+
+The GBIF backbone is already a giant source that should be sufficient for most. My background is in microbiology, so I have added databases for bacteria, virus and fungi. If you find any species lacking and have suggestions for a relevant database to add, please let me know and I will try to incorporate it.
+
+* Installation:
+** Linux:
+The following instructions work if you are using the [[https://hunspell.github.io/][hunspell]] dictionary.
+Download the taxonomy.dic file and place it in ~/Library/Spelling.
+You can now use the dictionary called taxonomy. If you would like to use it on a file, and also check spelling errors for the english language use this command:
+#+begin_example
+$ hunspell -d en_US,taxonomy myFile.txt
+#+end_example
+
+** Microsoft Word:
+On windows the custom dictionaries are stored at this location: "C:\Users\<username>\AppData\Roaming\Microsoft\UProof".
+I had some troubles with Word not recognizing the file as unicode (UTF-8) even though it is. Because of this, the easiest way to add the dictionary, is to make a custom dictionary for the user and afterwards copy/paste all the content from the downloaded dictionary to the new one.
+Follow theese instructions for creating a custom dictionary:
+* Aknowledgement
+Thanks to Jose Alfredo Samaniego Castruita that showed me how to use the sed and awk commands to handle the data and obtain the desired result.
+Thanks to every one that has contributed to the databases used for this project.
+
+* References
+#+print_bibliography
