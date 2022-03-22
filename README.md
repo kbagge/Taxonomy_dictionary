@@ -12,7 +12,7 @@ It is massive, for a comparison the english dictionary have around 130,000 words
 
 The GBIF backbone is already a giant source that should be sufficient for most. My background is in microbiology, so I have added databases for bacteria, virus and fungi. If you find any species lacking and have suggestions for a relevant database to add, please let me know and I will try to incorporate it.
 
-## Installation:
+## Installation
 ### Linux:
 The following instructions work if you are using the [hunspell](https://hunspell.github.io/) dictionary.
 Download the taxonomy.dic file and place it in `~/Library/Spelling`.
@@ -21,12 +21,14 @@ You can now use the dictionary called taxonomy. Hunspell can check a file for mu
 
 ### Microsoft Word:
 On windows the custom dictionaries are stored at this location:  
+
     C:\Users\<username>\AppData\Roaming\Microsoft\UProof
+
 I had some troubles with Word not recognizing the file as unicode (UTF-8) even though it is. Because of this, the easiest way to add the dictionary, is to make a custom dictionary for the user and afterwards copy/paste all the content from the downloaded dictionary to the new one for example using notepad.
 [Here](https://support.microsoft.com/en-us/office/add-or-edit-words-in-a-spell-check-dictionary-56e5c373-29f8-4d11-baf6-87151725c0dc) are instructions for how to create a custom dictionary.
 
-## Version 1 (March 10, 2022)
-This version have been built with the following versions of the source databases.
+## Version
+Version 1 (March 10, 2022). This version have been built with the following versions of the source databases.
 - GBIF backbone: version from December 9, 2021
 - ICTV: Master Species List 2020.v1 [^5]
 - LPSN: genera, species and subspecies list (GSS) downloaded 2021-10-29 
