@@ -33,7 +33,7 @@ I had some troubles with Word not recognizing the file as unicode (UTF-8) even t
 * Version 1.0
 This version have been built with the following versions of the source databases.
 - GBIF backbone: December 9, 2021
-- ICTV: Master Species List 2020.v1
+- ICTV: Master Species List 2020.v1 [fn:1]
 - LPSN: lpsn_gss_2021-10-29
 - Mycobank: version 8th of June 2021.
 
@@ -44,10 +44,15 @@ Thanks to every one that has contributed to the databases used for this project.
 * References
 [^1]: Registry-Migration.Gbif.Org. “GBIF Backbone Taxonomy.” GBIF Secretariat, 2021. https://doi.org/10.15468/39OMEI.
 
-Walker, Peter J., Stuart G. Siddell, Elliot J. Lefkowitz, Arcady R. Mushegian, Evelien M. Adriaenssens, Donald M. Dempsey, Bas E. Dutilh, et al. “Changes to Virus Taxonomy and the Statutes Ratified by the International Committee on Taxonomy of Viruses (2020).” Archives of Virology 165, no. 11 (November 2020): 2737–48. https://doi.org/10.1007/s00705-020-04752-x.
 
 [^2]: Lefkowitz, Elliot J., Donald M. Dempsey, Robert Curtis Hendrickson, Richard J. Orton, Stuart G. Siddell, and Donald B. Smith. “Virus Taxonomy: The Database of the International Committee on Taxonomy of Viruses (ICTV).” Nucleic Acids Research 46, no. D1 (January 4, 2018): D708–17. https://doi.org/10.1093/nar/gkx932.
 
 [^3]: Parte, Aidan C., Joaquim Sardà Carbasse, Jan P. Meier-Kolthoff, Lorenz C. Reimer, and Markus Göker. “List of Prokaryotic Names with Standing in Nomenclature (LPSN) Moves to the DSMZ.” International Journal of Systematic and Evolutionary Microbiology 70, no. 11 (November 1, 2020): 5607–12. https://doi.org/10.1099/ijsem.0.004332.
 
 [^4]: Robert, Vincent, Duong Vu, Ammar Ben Hadj Amor, Nathalie van de Wiele, Carlo Brouwer, Bernard Jabas, Szaniszlo Szoke, et al. “MycoBank Gearing up for New Horizons.” IMA Fungus 4, no. 2 (December 2013): 371–79. https://doi.org/10.5598/imafungus.2013.04.02.16.
+
+
+
+* Footnote
+
+[fn:1] Walker, Peter J., Stuart G. Siddell, Elliot J. Lefkowitz, Arcady R. Mushegian, Evelien M. Adriaenssens, Donald M. Dempsey, Bas E. Dutilh, et al. “Changes to Virus Taxonomy and the Statutes Ratified by the International Committee on Taxonomy of Viruses (2020).” Archives of Virology 165, no. 11 (November 2020): 2737–48. https://doi.org/10.1007/s00705-020-04752-x.
