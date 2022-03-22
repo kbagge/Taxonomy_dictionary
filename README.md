@@ -2,7 +2,7 @@
 
 The purpose of this dictionary is to include **all** taxonomic names, so that it can be used from your preferred text editor and correct your spelling mistakes. It should be of good use to anyone working with biology and frequently using taxonomic names in their writing. It will not check if *italics* is used properly, so please be aware of that yourself. It has been built from four sources, and the goal is to include every taxon described:
 
-- [GBIF backbone](https://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c)[^1]
+- [GBIF backbone](https://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c) [^1]
 - [ICTV](https://talk.ictvonline.org/) [^2]
 - [LPSN](https://lpsn.dsmz.de/text/introduction) [^3]
 - [Mycobank](https://www.mycobank.org/) [^4]
@@ -12,31 +12,31 @@ It is massive, for a comparison the english dictionary have around 130,000 words
 
 The GBIF backbone is already a giant source that should be sufficient for most. My background is in microbiology, so I have added databases for bacteria, virus and fungi. If you find any species lacking and have suggestions for a relevant database to add, please let me know and I will try to incorporate it.
 
-# Installation:
-## Linux:
+## Installation:
+### Linux:
 The following instructions work if you are using the [hunspell](https://hunspell.github.io/) dictionary.
 Download the taxonomy.dic file and place it in ´~/Library/Spelling´.
 You can now use the dictionary called taxonomy. Hunspell can check a file for multiple languages at the same time. If you would like to use it on a file, and also check for spelling errors for the English language you can use this command:
     $ hunspell -d en_US,taxonomy myFile.txt
 
-## Microsoft Word:
+### Microsoft Word:
 On windows the custom dictionaries are stored at this location:
     C:\Users\<username>\AppData\Roaming\Microsoft\UProof
 I had some troubles with Word not recognizing the file as unicode (UTF-8) even though it is. Because of this, the easiest way to add the dictionary, is to make a custom dictionary for the user and afterwards copy/paste all the content from the downloaded dictionary to the new one for example using notepad.
 [Here](https://support.microsoft.com/en-us/office/add-or-edit-words-in-a-spell-check-dictionary-56e5c373-29f8-4d11-baf6-87151725c0dc) are instructions for how to create a custom dictionary.
 
-# Version 1.0
+## Version 1.0
 This version have been built with the following versions of the source databases.
-- GBIF backbone: December 9, 2021
+- GBIF backbone: version from December 9, 2021
 - ICTV: Master Species List 2020.v1 [^5]
-- LPSN: lpsn_gss_2021-10-29
-- Mycobank: version 8th of June 2021.
+- LPSN: genera, species and subspecies list (GSS) downloaded 2021-10-29 
+- Mycobank: version 8th of June 2021. 
 
-# Aknowledgement
+## Aknowledgement
 Thanks to Jose Alfredo Samaniego Castruita that showed me how to use the sed and awk commands to handle the data and obtain the desired result.
 Thanks to every one that has contributed to the databases used for this project.
 
-# References
+## References
 [^1]: Registry-Migration.Gbif.Org. “GBIF Backbone Taxonomy.” GBIF Secretariat, 2021. https://doi.org/10.15468/39OMEI.
 
 
