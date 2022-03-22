@@ -15,12 +15,12 @@ The GBIF backbone is already a giant source that should be sufficient for most. 
 ## Installation:
 ### Linux:
 The following instructions work if you are using the [hunspell](https://hunspell.github.io/) dictionary.
-Download the taxonomy.dic file and place it in ´~/Library/Spelling´.
-You can now use the dictionary called taxonomy. Hunspell can check a file for multiple languages at the same time. If you would like to use it on a file, and also check for spelling errors for the English language you can use this command:
+Download the taxonomy.dic file and place it in `~/Library/Spelling`.
+You can now use the dictionary called taxonomy. Hunspell can check a file for multiple languages at the same time. If you would like to use it on a file, and also check for spelling errors for the English language you can use this command:  
     $ hunspell -d en_US,taxonomy myFile.txt
 
 ### Microsoft Word:
-On windows the custom dictionaries are stored at this location:
+On windows the custom dictionaries are stored at this location:  
     C:\Users\<username>\AppData\Roaming\Microsoft\UProof
 I had some troubles with Word not recognizing the file as unicode (UTF-8) even though it is. Because of this, the easiest way to add the dictionary, is to make a custom dictionary for the user and afterwards copy/paste all the content from the downloaded dictionary to the new one for example using notepad.
 [Here](https://support.microsoft.com/en-us/office/add-or-edit-words-in-a-spell-check-dictionary-56e5c373-29f8-4d11-baf6-87151725c0dc) are instructions for how to create a custom dictionary.
@@ -32,7 +32,7 @@ This version have been built with the following versions of the source databases
 - LPSN: genera, species and subspecies list (GSS) downloaded 2021-10-29 
 - Mycobank: version 8th of June 2021. 
 
-## Aknowledgement
+## Acknowledgement
 Thanks to Jose Alfredo Samaniego Castruita that showed me how to use the sed and awk commands to handle the data and obtain the desired result.
 Thanks to every one that has contributed to the databases used for this project.
 
