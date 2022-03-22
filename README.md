@@ -16,11 +16,12 @@ The GBIF backbone is already a giant source that should be sufficient for most. 
 ### Linux:
 The following instructions work if you are using the [hunspell](https://hunspell.github.io/) dictionary.
 Download the taxonomy.dic file and place it in `~/Library/Spelling`.
-You can now use the dictionary called taxonomy. Hunspell can check a file for multiple languages at the same time. If you would like to use it on a file, and also check for spelling errors for the English language you can use this command:  
+You can now use the dictionary called taxonomy. Hunspell can check a file for multiple languages at the same time. If you would like to use it on a file, and also check for spelling errors for the English language you can use this command:
+
     $ hunspell -d en_US,taxonomy myFile.txt
 
 ### Microsoft Word:
-On windows the custom dictionaries are stored at this location:  
+On windows the custom dictionaries are stored at this location:
 
     C:\Users\<username>\AppData\Roaming\Microsoft\UProof
 
