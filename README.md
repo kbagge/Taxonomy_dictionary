@@ -25,7 +25,7 @@ On windows the custom dictionaries are stored at this location:
 
     C:\Users\<username>\AppData\Roaming\Microsoft\UProof
 
-I had some troubles with Word not recognizing the file as unicode (UTF-8) even though it is. Because of this, the easiest way to add the dictionary, is to make a custom dictionary for the user. [Here](https://support.microsoft.com/en-us/office/add-or-edit-words-in-a-spell-check-dictionary-56e5c373-29f8-4d11-baf6-87151725c0dc) are instructions for how to create a custom dictionary. You can call it my_taxonomy or whatever, to identify it later.
+I had some troubles with Word not recognizing the file as unicode (UTF-8) even though it is. Because of this, the easiest way to add the dictionary, is to make a custom dictionary for the user. [Here](https://support.microsoft.com/en-us/office/add-or-edit-words-in-a-spell-check-dictionary-56e5c373-29f8-4d11-baf6-87151725c0dc) are instructions for how to create a custom dictionary. You can call it my_taxonomy or whatever, to identify it later.  
 Afterwards copy/paste all the content from the downloaded dictionary to the new one for example using notepad, CTRL+a, CTRL+c and CTRL+v.
 The last step is to enable the dictionary in Word, there is also instructions for that in the link above.
 
