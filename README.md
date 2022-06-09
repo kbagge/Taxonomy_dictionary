@@ -1,17 +1,17 @@
 # The Taxonomy Dictionary
 
-The purpose of this dictionary is to include **all** taxonomic names, so that it can be used from your preferred text editor and correct your spelling mistakes. It should be of good use to anyone working with biology and frequently using taxonomic names in their writing. It will not check if *italics* is used properly, so please be aware of that yourself. It has been built from five sources, and the goal is to include every taxon described:
+The purpose of this dictionary is to include **all** taxons, so that it can be used from your preferred text editor and correct your spelling mistakes. It should be of good use to anyone working with biology and frequently using taxonomic names in their writing. It will not check if *italics* is used properly, so please be aware of that yourself. It has been built from five sources, and the goal is to include every taxon described:
 
-- [GBIF backbone](https://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c) [^1]
-- [Catalogue of life](https://www.catalogueoflife.org/) [^2] 
-- [ICTV](https://talk.ictvonline.org/) [^3]
-- [LPSN](https://lpsn.dsmz.de/text/introduction) [^4]
-- [Mycobank](https://www.mycobank.org/) [^5]
+- [Global Biodiversity Information Facility (GBIF) Backbone Taxonomy](https://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c) [^1]
+- [Catalogue of Life (COL)](https://www.catalogueoflife.org/) [^2] 
+- [International Committee on Taxonomy of Viruses (ICTV)](https://talk.ictvonline.org/) [^3]
+- [List of Prokaryotic names with Standing in Nomenclature (LPSN)](https://lpsn.dsmz.de/text/introduction) [^4]
+- [MycoBank](https://www.mycobank.org/) [^5]
 
-All taxonomic entries in the above databases have been aggregated, so every single species and subspecies that figures in one of the databases are included. It has been deduplicated, so every word appears only once. The result is a dictionary consisting of 1,410,103 taxonomic words.
+All taxonomic entries in the above databases have been aggregated, so every single species and subspecies that figure in one of the databases are included. It has been deduplicated, so every word appears only once. The result is a dictionary consisting of 1,410,103 taxonomic words.
 It is massive, for a comparison the english dictionary have around 130,000 words. It will mark the words you spell wrong. And you can rely on that the words that are not marked are mostly spelled correct. As a consequence of it's size the autosuggestions for correcting a word is not always on spot. This depends on the spelling engine you use and not the dictionary. Many times it will however suggest a reasonable correction.
 
-The GBIF backbone and Catalogue of lige are already giant sources that should be sufficient for most. My background is in microbiology, so I wanted to make sure that the taxons for bacteria, virus and fungi were up to date, and therefore added LPSN, ICTV and MycoBank. If you find any species lacking or have suggestions for a relevant database to add, please let me know and I will try to incorporate it.
+The GBIF backbone and COL are already giant sources that should be sufficient for most. My background is in microbiology, so I wanted to make sure that the taxons for bacteria, virus and fungi were up to date, and therefore added LPSN, ICTV and MycoBank. If you find any species lacking or have suggestions for a relevant database to add, please let me know and I will try to incorporate it.
 
 ## Installation
 ### Linux:
@@ -33,11 +33,13 @@ At last make sure that the new dictionary is enabled in Word, it should be autom
 
 ## Version
 Version 1 (March 30, 2022). This version have been built with the following versions of the source databases.
-- GBIF backbone: version from December 9, 2021
+- GBIF Backbone: version from December 9, 2021
 - Catalogue of Life: 2022-03-21 - ChecklistBank 9812
 - ICTV: Master Species List 2020.v1 [^6]
 - LPSN: genera, species and subspecies list (GSS) downloaded 2021-10-29 
 - Mycobank: version 8th of June 2021. 
+
+The repository contains a script that was used to generate the dictionary. You can reproduce it yourself on your machine or get inspired and make your own dictionary for another topic. Please be aware that the script contains some manual steps that must be done before the rest can run. This was unavoidable since some of the databases needs to be downloaded manually others have to be exported from excel format.
 
 ## Acknowledgement
 Thanks to Jose Alfredo Samaniego Castruita that showed me how to use the sed and awk commands to handle the data and obtain the desired result.
