@@ -6,11 +6,15 @@ mkdir -p downloaded_datafiles/lpsn
 mkdir -p downloaded_datafiles/mycobank
 mkdir -p downloaded_datafiles/col
 mkdir -p downloaded_datafiles/gbif
+mkdir -p downloaded_datafiles/zoobank
+mkdir -p downloaded_datafiles/wfo
 mkdir -p modified_datafiles/ictv
 mkdir -p modified_datafiles/lpsn
 mkdir -p modified_datafiles/mycobank
 mkdir -p modified_datafiles/col
 mkdir -p modified_datafiles/gbif
+mkdir -p modified_datafiles/zoobank
+mkdir -p modified_datafiles/wfo
 mkdir -p dictionary_files
 
 ## WARNING ##
@@ -45,6 +49,17 @@ mkdir -p dictionary_files
 # 2) Unzip the archive, can be done like this:
 # unzip downloaded_datafiles/col/col.zip -d downloaded_datafiles/col/col_unzipped
 
+## Zoobank
+# 1) Must be downloaded manually from here: https://www.gbif.org/dataset/c8227bb4-4143-443f-8cb2-51f9576aff14
+# Save it as downloaded_datafiles/zoobank/dwca-zoobank-v1.7.zip
+# 2) Unzip the archive, can be done like this:
+# unzip downloaded_datafiles/zoobank/dwca-zoobank-v1.7.zip
+
+## The World Flora Online
+# 1) Must be downloaded manually from here: http://www.worldfloraonline.org/downloadData;jsessionid=7DD9F11BC04922A2BD3C3DBEEAA40D68
+# Save it as  downloaded_datafiles/wfo/WFO_Backbone.zip
+# 2) Unzip the archive, can be done like this:
+# unzip downloaded_datafiles/wfo/WFO_Backbone.zip
 
 ### ATTENTION: ###
 # After the steps above the script should be able to run and generate the dictionary file - have fun.
@@ -55,8 +70,6 @@ cut -f2-16 -d, downloaded_datafiles/ictv/ictv.csv > modified_datafiles/ictv/ictv
 
 # Use sed to remove commas then move every word on to a new line. Afterwards pipe to unique and save under new filename.
 sed 's/,/ /g' modified_datafiles/ictv/ictv.csv | sed 's/ /\n/g' | sort | uniq > modified_datafiles/ictv/ictv_uniq
-# Only keep entries that have at least one a-z letter.
-sed -E '/[a-z]|[A-Z]/!d' modified_datafiles/ictv/ictv_uniq > modified_datafiles/ictv/ictv_nonum
 
 ## LPSN
 
@@ -73,8 +86,6 @@ cut -f2 downloaded_datafiles/mycobank/mycobank.csv > modified_datafiles/mycobank
 
 # Use sed to move every word on to a new line. Afterwards pipe to unique and save under new filename.
 sed 's/ /\n/g' modified_datafiles/mycobank/myco.csv | sort | uniq > modified_datafiles/mycobank/myco_uniq
-# Remove all words that doesn't contain a single letter
-sed -E '/[a-z]|[A-Z]/!d' modified_datafiles/mycobank/myco_uniq > modified_datafiles/mycobank/myco_uniq2
 
 ## GBIF Backbone
 
@@ -96,13 +107,29 @@ sed '1d;2d' modified_datafiles/col/cat_nl > modified_datafiles/col/cat_nl2
 # Remove all spaces and filter dublicates
 sed 's/ /\n/g' modified_datafiles/col/cat_nl2 | sort | uniq > modified_datafiles/col/cat_space
 
+## Zoobank
+ # The taxonomic data are in coloumn  18 though 24
+ cut -f18-24 downloaded_datafiles/zoobank/dwca-zoobank-v1.7/taxon.txt > modified_datafiles/zoobank/zoo_cut
+# Remove tabs and spaces, then filter dublicates
+sed 's/ /\n/g' modified_datafiles/zoobank/zoo_cut | sed 's/\t/\n/g' | sort | uniq > modified_datafiles/zoobank/zoo_done
+
+## World flora online
+
+# We need from column 8 to 13.
+cut -f8-13 downloaded_datafiles/wfo/WFO_Backbone/classification.txt > modified_datafiles/wfo/wfo_cut
+
+# Remove tabs and spaces, then filter dublicates
+sed 's/ /\n/g' modified_datafiles/wfo/wfo_cut | sed 's/\t/\n/g' | sort | uniq > modified_datafiles/wfo/wfo_done
+
 ## Merge the databases
 
 cat modified_datafiles/lpsn/lpsn_uniq > dictionary_files/taxonomy_wordlist
-cat modified_datafiles/ictv/ictv_nonum >> dictionary_files/taxonomy_wordlist
-cat modified_datafiles/mycobank/myco_uniq2 >> dictionary_files/taxonomy_wordlist
+cat modified_datafiles/ictv/ictv_uniq >> dictionary_files/taxonomy_wordlist
+cat modified_datafiles/mycobank/myco_uniq >> dictionary_files/taxonomy_wordlist
 cat modified_datafiles/gbif/backbone >> dictionary_files/taxonomy_wordlist
 cat modified_datafiles/col/cat_space >> dictionary_files/taxonomy_wordlist
+cat modified_datafiles/zoobank/zoo_done >> dictionary_files/taxonomy_wordlist
+cat modified_datafiles/wfo/wfo_done >> dictionary_files/taxonomy_wordlist
 
 # Then sort and remove duplicates
 sort dictionary_files/taxonomy_wordlist | uniq > dictionary_files/taxonomy_wordlist_uniq
@@ -112,7 +139,7 @@ sed -E '/[a-z]|[A-Z]/!d' dictionary_files/taxonomy_wordlist_uniq > dictionary_fi
 
 ## Make the dictionary file
 # The formats normally used require the first line to contain the number of words in the dicionary - Let's insert that in the top:
-wc -l dictionary_files/taxonomy | sed 's/ taxonomy//g' > dictionary_files/taxonomy.dic
+wc -l dictionary_files/taxonomy | sed 's/ dictionary_files\/taxonomy//g' > dictionary_files/taxonomy.dic
 
 # Then let's insert some descriptive text, so any one finding this file later knows what it is and where it came from. None of the words will be added to the dictionary since we start out with tabs on each line.
 echo "
