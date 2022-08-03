@@ -37,7 +37,7 @@ At last make sure that the new dictionary is enabled in Word, it should be autom
 Version 2 (August, 2022). This version have been built with the following versions of the source databases.
 - GBIF Backbone: version from December 9, 2021
 - Catalogue of Life: 2022-03-21 - ChecklistBank 9812
-- ICTV: Master Species List 2020.v1 [^6]
+- ICTV: Master Species List 2020.v1 [^8]
 - LPSN: genera, species and subspecies list (GSS) downloaded 2021-10-29 
 - Mycobank: version 8th of June 2021.
 - Zoobank v1.7, July 26 2022.
