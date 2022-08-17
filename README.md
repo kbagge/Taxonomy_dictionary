@@ -11,9 +11,9 @@ The purpose of this dictionary is to include **all** taxa, so that it can be use
 - [The World Flora Online](http://www.worldfloraonline.org/) [^7]
 
 All taxonomic entries in the above databases have been aggregated, so every single species and subspecies that figure in one of the databases are included. It has been deduplicated, so every word appears only once. The result is a dictionary consisting of 1,412,046 taxonomic words.
-It is massive, for a comparison the english dictionary have around 130,000 words. It will mark the words you spell wrong. And you can rely on that the words that are not marked are mostly spelled correct. As a consequence of it's size the autosuggestions for correcting a word is not always on spot. This depends on the spelling engine you use and not the dictionary. Many times it will however suggest a reasonable correction.
+It is massive, for a comparison the English dictionary have around 130,000 words. It will mark the words you spell wrong. And you can rely on that the words that are not marked are mostly spelled correct. As a consequence of it's size the autosuggestions for correcting a word is not always on spot if there are many similar words. This depends on the spelling engine you use and not the dictionary. Many times it will however suggest a reasonable correction.
 
-The GBIF backbone and COL are already giant sources that should be sufficient for most. My background is in microbiology, so I wanted to make sure that the taxa for bacteria, virus and fungi were up to date, and therefore added LPSN, ICTV and MycoBank. I have also included world flora online and zoobank to give proper coverage of plants and animals. If you find any species lacking or have suggestions for a relevant database to add, please let me know and I will try to incorporate it.
+The GBIF backbone and COL are already giant sources that should be sufficient for most. My background is in microbiology, so I wanted to make sure that the taxa for bacteria, virus and fungi were up to date, and therefore added LPSN, ICTV and MycoBank. I have also included World Flora Online and Zoobank to give proper coverage of plants and animals. If you find any species lacking or have suggestions for a relevant database to add, please let me know and I will try to incorporate it.
 
 ## Installation
 ### Linux:
@@ -46,7 +46,7 @@ Version 2 (August, 2022). This version have been built with the following versio
 
 The repository contains a script that was used to generate the dictionary. You can reproduce it yourself on your machine or get inspired and make your own dictionary for another topic. Please be aware that the script contains some manual steps that must be done before the rest can run. This was unavoidable since some of the databases needs to be downloaded manually others have to be exported from excel format.
 
-## Acknowledgement
+## Acknowledgment
 Thanks to Jose Alfredo Samaniego Castruita that showed me how to use the sed and awk commands to handle the data and obtain the desired result.
 Thanks to every one that has contributed to the databases used for this project.
 
