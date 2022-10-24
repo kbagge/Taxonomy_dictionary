@@ -1,5 +1,7 @@
 # The Taxonomy Dictionary
 
+[![DOI](https://zenodo.org/badge/472350882.svg)](https://zenodo.org/badge/latestdoi/472350882)
+
 The purpose of this dictionary is to include **all** taxa, so that it can be used from your preferred text editor and correct your spelling mistakes. It should be of good use to anyone working with biology and frequently using taxonomic names in their writing. It will not check if *italics* is used properly, so please be aware of that yourself. It has been built from the following sources, and the goal is to include every taxon described:
 
 - [Global Biodiversity Information Facility (GBIF) Backbone Taxonomy](https://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c) [^1]
