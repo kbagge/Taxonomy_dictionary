@@ -1,14 +1,10 @@
 # The Taxonomy Dictionary
 
-<<<<<<< HEAD
 Version 1.0.3: 28th January 2023
 
-The purpose of this dictionary is to include **all** taxa, so that it can be used from your preferred text editor and correct your spelling mistakes. It should be of good use to anyone working with biology and frequently using taxonomic names in their writing. It will not check if *italics* is used properly, so please be aware of that yourself. It has been built from the following sources:
-=======
 [![DOI](https://zenodo.org/badge/472350882.svg)](https://zenodo.org/badge/latestdoi/472350882)
 
-The purpose of this dictionary is to include **all** taxa, so that it can be used from your preferred text editor and correct your spelling mistakes. It should be of good use to anyone working with biology and frequently using taxonomic names in their writing. It will not check if *italics* is used properly, so please be aware of that yourself. The goal is to include every taxon described, and does so by harvesting data from the largest taxonomy databases. The databases used are:
->>>>>>> origin/main
+The purpose of this dictionary is to include **all** taxa, so that it can be used from your preferred text editor and correct your spelling mistakes. It should be of good use to anyone working with biology and frequently using taxonomic names in their writing. It will not check if *italics* is used properly, so please be aware of that yourself. It has been built from the following databases:
 
 - [Global Biodiversity Information Facility (GBIF) Backbone Taxonomy](https://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c) [^1]
 - [Catalogue of Life (COL)](https://www.catalogueoflife.org/) [^2] 
@@ -41,16 +37,16 @@ You can now use the dictionary called taxonomy. Hunspell can check a file for mu
 
     $ hunspell -d en_US,taxonomy myFile.txt
 
-### Microsoft Word: (IN PROCESS)
-- Download the taxonomy.dic file from this repository.
-- Open the taxonomy.dic file in notepad and then press save as and select unicode as format instead of.
-- Make a custom dictionary for the user. [Here](https://support.microsoft.com/en-us/office/add-or-edit-words-in-a-spell-check-dictionary-56e5c373-29f8-4d11-baf6-87151725c0dc) are instructions for how to create a custom dictionary. In short go to File > Options > Proofing  You can call it taxonomy.
-- Copy/paste all the content from taxonomy.dic to the newly created custom dictionary. (You can use notepad and CTRL+a, CTRL+c and CTRL+v).
+### Microsoft Word:
+- Download the Taxonomy_MS_WORD.dic file from this repository.
+- Move the file to where Word saves the users custom dictionaries.
 On windows the custom dictionaries are stored at this location: (Be aware that AppData is a hidden directory)
 
     C:\Users\<username>\AppData\Roaming\Microsoft\UProof
 
-At last make sure that the new dictionary is enabled in Word, it should be automatically after creation, if not, there is also instructions for that in the link above.
+- Add the dictionary from word. [Here](https://support.microsoft.com/en-us/office/add-or-edit-words-in-a-spell-check-dictionary-56e5c373-29f8-4d11-baf6-87151725c0dc) are instructions on how to add thirdparty dictionaries. 
+In short go to File > Options > Proofing > Add > Find the Taxonomy_MS_Word.dic file in the new destination and add it.
+
 
 ## Version
 This version have been built with the following versions of the source databases.
