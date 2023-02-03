@@ -39,7 +39,7 @@ You can now use the dictionary called taxonomy. Hunspell can check a file for mu
 
 ### Microsoft Word:
 - Download the Taxonomy_MS_WORD.dic file from this repository.
-- Move the file to where Word saves the users custom dictionaries.
+- (Optional) Move the file to where Word saves the users custom dictionaries.
 On windows the custom dictionaries are stored at this location: (Be aware that AppData is a hidden directory)
 
     C:\Users\<username>\AppData\Roaming\Microsoft\UProof
