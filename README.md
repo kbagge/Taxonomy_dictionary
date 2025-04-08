@@ -1,10 +1,8 @@
 # The Taxonomy Dictionary
 
-Version 1.0.3: 28th January 2023
+Version 1.0.4: 30th March 2025
 
-[![DOI](https://zenodo.org/badge/472350882.svg)](https://zenodo.org/badge/latestdoi/472350882)
-
-The purpose of this dictionary is to include **all** taxa, so that it can be used from your preferred text editor and correct your spelling mistakes. It should be of good use to anyone working with biology and frequently using taxonomic names in their writing. It will not check if *italics* is used properly, so please be aware of that yourself. It has been built from the following databases:
+The purpose of this dictionary is to include **all** taxa, so that it can be used from your preferred text editor and correct your spelling mistakes. It should be of good use to anyone working with biology and frequently using taxonomic names in their writing. It will not check if *italics* is used properly, so please be aware of that yourself. It has been built from the following sources:
 
 - [Global Biodiversity Information Facility (GBIF) Backbone Taxonomy](https://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c) [^1]
 - [Catalogue of Life (COL)](https://www.catalogueoflife.org/) [^2] 
@@ -14,10 +12,10 @@ The purpose of this dictionary is to include **all** taxa, so that it can be use
 - [Zoobank](https://zoobank.org/) [^6]
 - [The World Flora Online](http://www.worldfloraonline.org/) [^7]
 
-All taxonomic entries in the above databases have been **aggregated**, so every single species and subspecies that figure in one of the databases are included. It has been **deduplicated**, so every word appears only once. The result is a dictionary consisting of around **1.4 million taxonomic words**.
+All taxonomic entries in the above databases have been **aggregated**, so every single species and subspecies that figure in one of the databases are included. It has been **deduplicated**, so every word appears only once. The result is a dictionary consisting of around **1,4 million taxonomic words**.
 It is massive, for a comparison the English dictionary have around 130,000 words. It will mark the words you spell wrong. And you can rely on that the words that are not marked are mostly spelled correct. As a consequence of it's size, the autosuggestions may be subject to error, if there are many similar words. This depends on the spelling engine used and not the dictionary. Many times, it will however suggest a reasonable correction.
 
-The GBIF backbone and COL are already giant sources that should be sufficient for most. My background is in microbiology, so I wanted to make sure that the taxa for bacteria, virus and fungi were up to date, and therefore added LPSN, ICTV and MycoBank. I have also included World Flora Online and Zoobank to give proper coverage of plants and animals. If you find any species lacking or have suggestions for a relevant database to add, please let me know and I will try to incorporate it. The dictionary will be updated 2-4 times a year.
+The GBIF backbone and COL are already giant sources that should be sufficient for most. My background is in microbiology, so I wanted to make sure that the taxa for bacteria, virus and fungi were up to date, and therefore added LPSN, ICTV and MycoBank. I have also included World Flora Online and Zoobank to give proper coverage of plants and animals. If you find any species lacking or have suggestions for a relevant database to add, please let me know and I will try to incorporate it. 
 
 The repository contains a script (wordlist_script.sh) that was used to generate the dictionary. You can reproduce it yourself on your machine or get inspired and make your own dictionary for another topic. Please be aware that for the LPSN database you need to make a login before you can download the content. Update the lpsnapi.py script with your login credentials before running the wordlist_script.
 
@@ -37,26 +35,26 @@ You can now use the dictionary called taxonomy. Hunspell can check a file for mu
 
     $ hunspell -d en_US,taxonomy myFile.txt
 
-### Microsoft Word:
-- Download the Taxonomy_MS_WORD.dic file from this repository.
-- (Optional) Move the file to where Word saves the users custom dictionaries.
+### Microsoft Word: (IN PROCESS)
+- Download the taxonomy.dic file from this repository.
+- Open the taxonomy.dic file in notepad and then press save as and select unicode as format instead of.
+- Make a custom dictionary for the user. [Here](https://support.microsoft.com/en-us/office/add-or-edit-words-in-a-spell-check-dictionary-56e5c373-29f8-4d11-baf6-87151725c0dc) are instructions for how to create a custom dictionary. In short go to File > Options > Proofing  You can call it taxonomy.
+- Copy/paste all the content from taxonomy.dic to the newly created custom dictionary. (You can use notepad and CTRL+a, CTRL+c and CTRL+v).
 On windows the custom dictionaries are stored at this location: (Be aware that AppData is a hidden directory)
 
     C:\Users\<username>\AppData\Roaming\Microsoft\UProof
 
-- Add the dictionary from word. [Here](https://support.microsoft.com/en-us/office/add-or-edit-words-in-a-spell-check-dictionary-56e5c373-29f8-4d11-baf6-87151725c0dc) are instructions on how to add thirdparty dictionaries. 
-In short go to File > Options > Proofing > Add > Find the Taxonomy_MS_Word.dic file in the new destination and add it.
-
+At last make sure that the new dictionary is enabled in Word, it should be automatically after creation, if not, there is also instructions for that in the link above.
 
 ## Version
 This version have been built with the following versions of the source databases.
-- GBIF Backbone: November 23, 2022.
-- Catalogue of Life: December 19, 2022.
-- ICTV: November 1, 2022.
-- LPSN: January 26, 2023.
-- Mycobank: March 23, 2022.
-- Zoobank: January 9, 2023.
-- The World Flora Online: June 28, 2022.
+- GBIF Backbone: August 28, 2023.
+- Catalogue of Life: November 24, 2023.
+- ICTV: March 3, 2025.
+- LPSN: 30 March, 2025.
+- Mycobank: January 13, 2025.
+- Zoobank: March 28, 2025.
+- The World Flora Online: June 22, 2024.
 
 
 
